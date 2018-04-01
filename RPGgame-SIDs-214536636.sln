@@ -1,14 +1,18 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPGgame-SIDs-214536636", "Assembly-CSharp.csproj", "{2067D222-1102-859D-442E-C3593E53FED9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-
+		{2067D222-1102-859D-442E-C3593E53FED9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2067D222-1102-859D-442E-C3593E53FED9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2067D222-1102-859D-442E-C3593E53FED9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2067D222-1102-859D-442E-C3593E53FED9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

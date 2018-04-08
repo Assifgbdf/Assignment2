@@ -9,10 +9,10 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{2067D222-1102-859D-442E-C3593E53FED9}</ProjectGuid>
+    <ProjectGuid>{6AA6ACD8-4593-5C3B-68C3-B194D15AEE8A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>Assets</BaseDirectory>
@@ -51,45 +51,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Cameracontrol.cs" />
-     <Compile Include="Assets\Scripts\PlayerControler.cs" />
-     <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\CircleObject.cs" />
-     <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\GameObjectExtensions.cs" />
-     <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\GPUInstancing.cs" />
-     <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\GroupLayer.cs" />
-     <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\ImportBehaviour.cs" />
-     <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\Layer.cs" />
-     <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\Log.cs" />
-     <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\ObjectLayer.cs" />
-     <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\PolygonObject.cs" />
-     <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\PolylineObject.cs" />
-     <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\RectangleObject.cs" />
-     <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\SortingLayerExposed.cs" />
-     <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\SpriteDepthInMap.cs" />
-     <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\TileAnimator.cs" />
-     <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\TiledMap.cs" />
-     <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\TileLayer.cs" />
-     <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\TileObject.cs" />
-     <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\TmxObject.cs" />
-     <None Include="Assets\Tiled2Unity\Shaders\shaDiffuseDepth-Instanced.shader" />
-     <None Include="Assets\Tiled2Unity\Shaders\shaDefault.shader" />
-     <None Include="Assets\Tiled2Unity\Shaders\shaDepth-Instanced.shader" />
-     <None Include="Assets\Tiled2Unity\Prefabs\_ReadMe.txt" />
-     <None Include="Assets\Tiled2Unity\Shaders\Tiled2Unity.cginc" />
-     <None Include="Assets\Tiled2Unity\Tiled2Unity.export.txt" />
-     <None Include="Assets\Tiled2Unity\Imported\maps.tiled2unity.xml" />
-     <None Include="Assets\Tiled2Unity\Shaders\shaDepth.shader" />
-     <None Include="Assets\Tiled2Unity\Shaders\shaDiffuseDepth.shader" />
-     <None Include="Assets\Tiled2Unity\Materials\_ReadMe.txt" />
-     <None Include="Assets\Tiled2Unity\Textures\_ReadMe.txt" />
-     <None Include="Assets\Tiled2Unity\Shaders\shaDefault-Instanced.shader" />
-     <None Include="Assets\Tiled2Unity\Shaders\shaColorKey-Instanced.shader" />
-     <None Include="Assets\Tiled2Unity\Shaders\shaColorKey.shader" />
-     <None Include="Assets\Tiled2Unity\Shaders\shaDepthColorKey.shader" />
-     <None Include="Assets\Tiled2Unity\Shaders\shaDepthColorKey-Instanced.shader" />
-     <None Include="Assets\Tiled2Unity\License.txt" />
-     <None Include="Assets\Tiled2Unity\Imported\_ReadMe.txt" />
-     <None Include="Assets\Tiled2Unity\Meshes\_ReadMe.txt" />
+     <Compile Include="Assets\Tiled2Unity\Scripts\Editor\CustomTiledImporterAttribute.cs" />
+     <Compile Include="Assets\Tiled2Unity\Scripts\Editor\ICustomTiledImporter.cs" />
+     <Compile Include="Assets\Tiled2Unity\Scripts\Editor\ImportTiled2Unity.cs" />
+     <Compile Include="Assets\Tiled2Unity\Scripts\Editor\ImportTiled2Unity.Material.cs" />
+     <Compile Include="Assets\Tiled2Unity\Scripts\Editor\ImportTiled2Unity.Mesh.cs" />
+     <Compile Include="Assets\Tiled2Unity\Scripts\Editor\ImportTiled2Unity.Prefab.cs" />
+     <Compile Include="Assets\Tiled2Unity\Scripts\Editor\ImportTiled2Unity.Texture.cs" />
+     <Compile Include="Assets\Tiled2Unity\Scripts\Editor\ImportTiled2Unity.Xml.cs" />
+     <Compile Include="Assets\Tiled2Unity\Scripts\Editor\ImportUtils.cs" />
+     <Compile Include="Assets\Tiled2Unity\Scripts\Editor\SortingLayerExposedEditor.cs" />
+     <Compile Include="Assets\Tiled2Unity\Scripts\Editor\SpriteDepthInMapEditor.cs" />
+     <Compile Include="Assets\Tiled2Unity\Scripts\Editor\Tiled2UnityMenuItems.cs" />
+     <Compile Include="Assets\Tiled2Unity\Scripts\Editor\TiledAssetPostProcessor.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
@@ -180,6 +154,16 @@
  <Reference Include="UnityEngine.StandardEvents">
  <HintPath>C:/Users/Administrator/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll</HintPath>
  </Reference>
+ <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.iOS.Extensions.Common">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Common.dll</HintPath>
+ </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp.csproj">
+      <Project>{2067D222-1102-859D-442E-C3593E53FED9}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

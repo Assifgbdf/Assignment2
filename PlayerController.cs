@@ -5,15 +5,25 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour {
     private Animator anim;
     private bool PlayMoving;
-    private Vector2 lastMove;
+    public Vector2 lastMove;
     public float moveSpeed; // set up Speed of the character which can change the speed of character in Inspector > Move Speed
-
+    private static bool PlayerExist;
     private Rigidbody2D myRigidbody;
         // Use this for initialization
     void Start()
     {
         anim = GetComponent<Animator>();
         myRigidbody = GetComponent<Rigidbody2D>();
+        if(!PlayerExist)
+        {
+            PlayerExist = true;
+            DontDestroyOnLoad(transform.gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+        
     }
 
     // Update is called once per frame

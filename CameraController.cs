@@ -6,10 +6,20 @@ public class CameraController : MonoBehaviour {
     public GameObject followTarget;
     private Vector3 targetPos;
     public float moveSpeed;
-	// Use this for initialization
-	void Start () {
-		
-	}
+    private static bool PlayerExist;
+    // Use this for initialization
+    void Start () {
+        DontDestroyOnLoad(transform.gameObject);
+        if (!PlayerExist)
+        {
+            PlayerExist = true;
+            DontDestroyOnLoad(transform.gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 	
 	// Update is called once per frame
 	void Update () {
